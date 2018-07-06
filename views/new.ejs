@@ -1,0 +1,36 @@
+<% include ./partials/header %>
+<div class="container-fluid">
+    <header class="form-header"><strong>What is your idea?</strong></header>
+    <form action="/projects" method="POST" class="form-sub">
+        <div class="form-group">
+            <label for="title">
+                Title
+            </label>    
+            <input id="title" type="text" name="project[title]"  class="form-control">
+            
+        </div>
+        <div class="form-group">
+            <label for="details">
+                Details
+            </label>    
+            <textarea id="details" type="text" name="project[details]"  class="form-control" ></textarea>
+             
+        </div>
+       <div class="form-check">
+           <input id="easy" type="radio" name="project[difficulty]" value="1" class="form-check-input">
+           <label class="form-check-label" for="easy">Easy</label>
+       </div>
+       <div class="form-check">
+           <input id="medium" type="radio" name="project[difficulty]" value="3" class="form-check-input">
+           <label class="form-check-label" for="medium">Medium</label>
+       </div>
+       <div class="form-check">
+           <input id="hard" type="radio" name="project[difficulty]" value="5" class="form-check-input">
+           <label class="form-check-label" for="hard">Hard</label>
+       </div>
+        <button class="btn btn-dark">Submit</button>
+    </form>
+</div>
+
+
+<% include ./partials/footer %> 

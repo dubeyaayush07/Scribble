@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <div class="card ideas">
+      <h5 class="card-header">
+        <div class="title"><%=project.title%></div>
+      </h5>
+      <div class="card-body">
+        <p class="card-text"><%=project.details%></p>
+        <div class = "stars">
+          <% for(let i = 0 ; i< project.difficulty; ++i) { %>
+            <i class="fas fa-star"></i>
+          <% }; %>
+        </div>
+        <a class="btn btn-success" href="/projects/<%=project._id%>/edit">Edit</a>
+        <form class="delete-form" action="/projects/<%=project._id%>?_method=DELETE" method="POST">
+               <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>
